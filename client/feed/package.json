@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://yourusername.github.io/project-name",
+  "homepage": "https://sodiumcodes.github.io/Post-Feed-App",
   "dependencies": {
     "axios": "^1.13.5",
     "gh-pages": "^6.3.0",
