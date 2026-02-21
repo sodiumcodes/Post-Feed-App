@@ -1,0 +1,3 @@
+node_modules/
+post-feed-app/node_modules/
+post-feed-app/server/.env
