@@ -1,0 +1,151 @@
+.create-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* ── Card ────────────────────────────────────── */
+.create-section {
+  background: var(--bg-card);
+  padding: 48px 40px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card), var(--shadow-glow);
+  width: 100%;
+  max-width: 440px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  animation: fadeScaleIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.create-section h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+}
+
+.create-section h1 span {
+  color: var(--accent-bright);
+}
+
+/* ── Form ────────────────────────────────────── */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* File input */
+.create-form input[type="file"] {
+  padding: 0;
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(59, 130, 246, 0.04);
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--text-secondary);
+  /* Style the file input button area */
+  padding: 20px;
+  text-align: center;
+}
+
+.create-form input[type="file"]:hover,
+.create-form input[type="file"]:focus {
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.08);
+  outline: none;
+}
+
+.create-form input[type="file"]::file-selector-button {
+  padding: 7px 16px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.2s;
+}
+
+.create-form input[type="file"]::file-selector-button:hover {
+  background: var(--accent-bright);
+}
+
+/* Text input */
+.create-form input[type="text"] {
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.create-form input[type="text"]::placeholder {
+  color: var(--text-muted);
+}
+
+.create-form input[type="text"]:focus {
+  border-color: var(--border-active);
+  background: rgba(59, 130, 246, 0.06);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+/* Submit button */
+.create-form button {
+  margin-top: 4px;
+  padding: 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+.create-form button:hover:not(:disabled) {
+  background: var(--accent-bright);
+  box-shadow: 0 6px 24px rgba(59, 130, 246, 0.45);
+  transform: translateY(-1px);
+}
+
+.create-form button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.create-form button:disabled {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  box-shadow: none;
+}
